@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class MainToDoList {
     public static void main(String[] args) {
-        ToDoList list = new ToDoList();
+        ToDoList toDoList = new ToDoList();
         Scanner scanner = new Scanner(System.in);
-        UserInteface ui = new UserInteface(list, scanner);
+        UserInteface ui = new UserInteface(toDoList, scanner);
         ui.start();
     }
     
