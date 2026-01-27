@@ -65,5 +65,16 @@ public class ToDoList {
         }
     }
 
-      
+    public boolean checkEventString(String value){
+        if (value == null){
+            return false;
+        }
+
+        if (value.length() < 3){
+            return false;
+        }
+
+        return value.matches("[a-zA-Z0-9 ]+");
+
+    }     
 }
