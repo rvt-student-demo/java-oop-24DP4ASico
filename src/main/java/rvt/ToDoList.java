@@ -28,6 +28,10 @@ public class ToDoList {
         
     }
     public void add(String task) {
+        if (!checkEventString(task)) {
+            System.out.println("Invalid task: must be at least 3 characters and contain only letters, digits and spaces.");
+            return;
+        }
         this.tasks.add(task);
         updateFile();
     }
@@ -51,7 +55,7 @@ public class ToDoList {
         if (id < 1 || id > tasks.size()) {
             return null; 
         }
-        return tasks.get(id);
+        return tasks.get(id - 1);
     }
 
     private boolean updateFile() {
@@ -69,12 +73,11 @@ public class ToDoList {
         if (value == null){
             return false;
         }
-
-        if (value.length() < 3){
+        String trimmed = value.trim();
+        if (trimmed.length() < 3) {
             return false;
         }
-
-        return value.matches("[a-zA-Z0-9 ]+");
-
+        // only letters (A-Z, a-z), digits and spaces allowed
+        return trimmed.matches("[A-Za-z0-9 ]+");
     }     
 }
