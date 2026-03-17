@@ -2,11 +2,13 @@ package rvt;
 
 public class ManeOS {
 public static void main(String[] args) {
-Item item = new Item("milk", 4, 2);
-System.out.println("an item that contains 4 milks has the total price of " + item.price());
-System.out.println(item);
-item.increaseQuantity();
-System.out.println(item);
+ShopingCart cart = new ShopingCart();
+cart.add("milk", 3);
+cart.add("buttermilk", 2);
+cart.add("cheese", 5);
+System.out.println("cart price: " + cart.price());
+cart.add("computer", 899);
+System.out.println("cart price: " + cart.price());
 
 }
 }
