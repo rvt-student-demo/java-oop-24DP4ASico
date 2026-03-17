@@ -25,5 +25,24 @@ public class Warehouse {
         return -99;
     }
 
+    public int stock(String product){
+        if(this.stock.containsKey(product)){
+            return this.stock.get(product);
+        }
+        return 0;
+    }
+
+    public boolean take(String product){
+        if(this.stock.containsKey(product)){
+            int stock = this.stock.get(product);
+            if(stock > 0){
+               stock--;
+               this.stock.replace(product, stock);
+               return true;
+            }
+        }
+        return false;
+    }
+
     
 }
