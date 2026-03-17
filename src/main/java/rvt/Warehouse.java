@@ -44,5 +44,7 @@ public class Warehouse {
         return false;
     }
 
-    
+    public Set<String> products(){
+        return this.prices.keySet();
+    }
 }
