@@ -33,4 +33,10 @@ public int price(){
     return sum;
 }
 
+public void print(){
+    for(Item item : cart.values()){
+        System.out.println(item);
+    }
+
+}
 }
