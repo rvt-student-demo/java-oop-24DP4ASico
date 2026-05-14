@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course id="1">
+        <title lang="en">Math</title>
+        <description>Zināšanas ar skaitļiem</description>
+        <teacher>John Doe</teacher>
+        <duration unit="hours">2.5</duration>
+        <students>25</students>
+        <level>Intermediate</level>
+    </course>
+
+    <course id="2">
+        <title lang="en">History</title>
+        <description>Zināšanas par vēsturi</description>
+        <teacher>Jane Smith</teacher>
+        <duration unit="hours">3.0</duration>
+        <students>30</students>
+        <level>Advanced</level>
+    </course>
+
+    <course id="3">
+        <title lang="en">Geography</title>
+        <description>Zināšanas par ģeogrāfiju</description>
+        <teacher>Lin Smith</teacher>
+        <duration unit="hours">2.5</duration>
+        <students>20</students>
+        <level>Beginner</level>
+    </course>
+</courses>
+
+<!-- XML struktūra: Hierarhisks koks ar vienu saknes elementu un ligzdotiem bērnelementiem.
+
+Atribūti: Izmanto, lai glabātu metadatus vai īpašības, kas apraksta elementus (piemēram, ID, līmenis).
+
+Datu hierarhija: Sakne → kurss → informācija (nosaukums, apraksts utt.). -->
