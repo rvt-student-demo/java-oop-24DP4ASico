@@ -12,10 +12,10 @@ public class ToDoListGUI extends JFrame {
     private JTextField taskField;
 
     public ToDoListGUI() {
-        todoList = new ToDoList();  // <-- connection to your class
+        todoList = new ToDoList();  
         listModel = new DefaultListModel<>();
 
-        // Load tasks from file into GUI list
+        
         for (String task : todoList.getTasks()) {
             listModel.addElement(task);
         }
@@ -29,8 +29,8 @@ public class ToDoListGUI extends JFrame {
         addButton.addActionListener(e -> {
             String task = taskField.getText().trim();
             if (!task.isEmpty()) {
-                todoList.add(task);          // <-- uses your logic
-                listModel.addElement(task);  // <-- updates GUI
+                todoList.add(task);          
+                listModel.addElement(task);  
                 taskField.setText("");
             }
         });
@@ -38,8 +38,8 @@ public class ToDoListGUI extends JFrame {
         removeButton.addActionListener(e -> {
             int index = taskList.getSelectedIndex();
             if (index >= 0) {
-                todoList.remove(index + 1);  // <-- uses your logic
-                listModel.remove(index);     // <-- updates GUI
+                todoList.remove(index + 1);  
+                listModel.remove(index);     
             }
         });
 
